@@ -17,7 +17,6 @@ const Image = ({ name }) => {
         }
       `}
       render={(data) => {
-        console.log(data)
         return (
           <Img fluid={data.icon.childImageSharp.fluid} />
         )
