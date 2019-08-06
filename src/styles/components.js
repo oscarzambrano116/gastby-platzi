@@ -157,11 +157,12 @@ export const StyledProducts = styled.div`
   & img {
     width: 100%;
     height: 400px;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
     margin: 0;
   }
   article {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     background: white;
