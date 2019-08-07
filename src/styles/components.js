@@ -154,7 +154,7 @@ export const StyledProducts = styled.div`
     color: ${colors.darkBlue};
     font-size: 2rem;
   }
-  & img {
+  & img {other 
     width: 100%;
     height: 400px;
     object-fit: contain;
