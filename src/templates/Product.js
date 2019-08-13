@@ -1,8 +1,9 @@
 import React from 'react'
+import { ProductDetail } from '../components'
 
-const Product = () => {
+const Product = ({ pageContext }) => {
   return(
-    <div>Product</div>
+    <ProductDetail {...pageContext} />
   )
 }
 

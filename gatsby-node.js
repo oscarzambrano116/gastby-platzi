@@ -28,7 +28,8 @@ exports.createPages = async ({ graphql, actions }) => {
   result.data.allStripeSku.edges.forEach(({ node }) => {
     createPage({
       path: `${node.id}`,
-      component: productTemplate
-    })
+      component: productTemplate,
+      context: node
+    })  
   })
 }
