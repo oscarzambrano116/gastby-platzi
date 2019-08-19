@@ -9,7 +9,7 @@ import {
   StyledProductDetail,
   QtySelect,
 } from '../styles/components'
-import { SEO } from '../components'
+import { SEO, Stars } from '../components'
 
 const ProductDetail = ({
   price,
@@ -17,6 +17,7 @@ const ProductDetail = ({
   product: {
     name,
     metadata,
+    metadata: { wear = '', description = '' },
   },
 }) => {
   const formatedPrice = priceFormat(price)
@@ -31,8 +32,11 @@ const ProductDetail = ({
         <Tag>Popular</Tag>
         <h2>{name}</h2>
         <b>USD {formatedPrice}</b>
+        <Stars />
+        { wear && <h3>Color: Blue</h3> }
+        <small>{description}</small>
         {
-          metadata.wear && (
+          wear && (
             <SizeSelect selected={size}>
               <SizeButton onClick={handleSetSize} value='1'>XS</SizeButton>
               <SizeButton onClick={handleSetSize} value='2'>S</SizeButton>
@@ -48,6 +52,7 @@ const ProductDetail = ({
           <input type="text" disabled value={qty} />
           <button onClick={() => setQty(qty + 1)}>+</button>
         </QtySelect>
+        <Button>Add to cart</Button>
       </div>
     </StyledProductDetail>
   )
