@@ -1,19 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import priceFormat from '../utils/priceFormat'
 import {
   Tag,
   SizeButton,
-  QtyButton,
   SizeSelect,
   Button,
   StyledProductDetail,
   QtySelect,
 } from '../styles/components'
 import { SEO, Stars } from '../components'
+import { CartContext } from '../context'
 
 const ProductDetail = ({
   price,
-  sku: id,
+  sku,
   product: {
     name,
     metadata,
@@ -23,7 +23,13 @@ const ProductDetail = ({
   const formatedPrice = priceFormat(price)
   const [size, setSize] = useState(2)
   const [qty, setQty] = useState(1)
+  const { addToCart } = useContext(CartContext)
   const handleSetSize = (e) => setSize(e.target.value)
+  
+  const handleAddToCart = () => {
+    addToCart({ price, sku, name, metadata, quantity: qty })
+  }
+
   return (
     <StyledProductDetail>
       <SEO title={name} />
@@ -52,7 +58,7 @@ const ProductDetail = ({
           <input type="text" disabled value={qty} />
           <button onClick={() => setQty(qty + 1)}>+</button>
         </QtySelect>
-        <Button>Add to cart</Button>
+        <Button onClick={handleAddToCart}>Add to cart</Button>
       </div>
     </StyledProductDetail>
   )
