@@ -13,7 +13,7 @@ import { CartContext } from '../context'
 
 const ProductDetail = ({
   price,
-  sku,
+  id,
   product: {
     name,
     metadata,
@@ -27,7 +27,7 @@ const ProductDetail = ({
   const handleSetSize = (e) => setSize(e.target.value)
   
   const handleAddToCart = () => {
-    addToCart({ price, sku, name, metadata, quantity: qty })
+    addToCart({ price, sku: id, name, metadata, quantity: qty })
   }
 
   return (

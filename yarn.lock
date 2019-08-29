@@ -731,6 +731,13 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
+"@babel/runtime@^7.5.5":
+  version "7.5.5"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.5.5.tgz#74fba56d35efbeca444091c7850ccd494fd2f132"
+  integrity sha512-28QvEGyQyNkB0/m2B4FU7IEZGK2NUrcMtT6BZEFALTguLk+AUT6ofsHtPk5QyjAdUkpMJ+/Em+quwz4HOt30AQ==
+  dependencies:
+    regenerator-runtime "^0.13.2"
+
 "@babel/template@^7.1.0", "@babel/template@^7.4.4":
   version "7.4.4"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.4.4.tgz#f4b88d1225689a08f5bc3a17483545be9e4ed237"
@@ -4870,6 +4877,13 @@ gatsby-plugin-stripe@1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-stripe/-/gatsby-plugin-stripe-1.2.2.tgz#c84832f5bbebe3fa7043860ae593e3d231c77fba"
   integrity sha512-0ewGrYO4/gJeyPzLrTIkQoihzodFji0Ihtsv8gn2CRTo95FmjimiKWsNkvCEhytT4yWBov9Eh8AGoqzV9ryeAQ==
+
+gatsby-plugin-styled-components@3.1.3:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-3.1.3.tgz#b97d8810c0ca1462d55eed5ba4f97750d5d1f166"
+  integrity sha512-631vcDQE8lnqeySX/uEdnfxGiintos9mxoKV9T0zZsphyYC/GcK6PTObClRTpGtNmg9i4+qRSb8qUJuVDpb/9Q==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
 
 gatsby-plugin-typography@2.3.2:
   version "2.3.2"
